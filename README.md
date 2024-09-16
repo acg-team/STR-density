@@ -21,6 +21,7 @@ In order to write software to do this, it is important to understand how genetic
 ### General
 * [GitHub](https://github.com/): source control is critical in any non-trivial project.
 * [miniconda](https://docs.anaconda.com/miniconda/): super useful for managing and separating work environments. Is used mainly for setting up Python environments, but can also be used for R.
+* [bedtools](https://bedtools.readthedocs.io/en/latest/index.html): "...a swiss-army knife of tools for a wide-range of genomics analysis tasks.". Useful command line tools for working with bed files, fasta files, etc.
 ### Python
 * [Biopython](https://biopython.org/): library for biological computation in Python. The [SeqIO](https://biopython.org/wiki/SeqIO) module can be useful to read and write sequences (fasta, fastq, etc.), although I tend to prefer pysam these days (see below).
 * [pysam](https://niyunyun-pysam-fork.readthedocs.io/en/latest/api.html): a Python wrapper for the original [htslib](https://github.com/samtools/htslib) C library. Focused on reading/writing alignment files, but also supports reading and writing of fasta, vcf, and more.
