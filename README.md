@@ -16,3 +16,12 @@ For more background on STRs, the way they mutate, and why they are relevant, you
 We are interested in determining whether the evolutionary age of genes (where they first emerged in the tree of life) has a relationship to the number of STR loci. The goal of this project is to write software that calculates the number and density of STRs in genes. This would provide clues to understanding the mechanisms behind how genes emerge. Ideally, the software should provide specific statistics for intronic, exonic, and/or coding regions.
 
 In order to write software to do this, it is important to understand how genetic data is represented computationally, and how we can work with such data. The most important formats to be aware of initially are [FASTA](https://www.ncbi.nlm.nih.gov/genbank/fastaformat/), [BED](https://samtools.github.io/hts-specs/BEDv1.pdf), and [GFF/GTF](https://www.gencodegenes.org/pages/data_format.html). For each of these, different libraries exist that can be used to parse them.
+
+## Useful tools and libraries
+### General
+* [GitHub](https://github.com/): source control is critical in any non-trivial project.
+* [miniconda](https://docs.anaconda.com/miniconda/): super useful for managing and separating work environments. Is used mainly for setting up Python environments, but can also be used for R.
+### Python
+* [Biopython](https://biopython.org/): library for biological computation in Python. The [SeqIO](https://biopython.org/wiki/SeqIO) module can be useful to read and write sequences (fasta, fastq, etc.), although I tend to prefer pysam these days (see below).
+* [pysam](https://niyunyun-pysam-fork.readthedocs.io/en/latest/api.html): a Python wrapper for the original [htslib](https://github.com/samtools/htslib) C library. Focused on reading/writing alignment files, but also supports reading and writing of fasta, vcf, and more.
+
