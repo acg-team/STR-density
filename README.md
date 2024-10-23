@@ -60,3 +60,18 @@ Software that can parse GTF files and provides functionality useful for this pro
 Importantly, gtftools can merge the exonic regions for different isoforms of a gene.
 This will be useful when determining the overlap between STRs, genes, and their exons.
 There is a paper describing gtftools in the [literature](literature) folder.
+
+## 2024-10-23: taskset 1
+Goal: use some test files located (in [data](./data/)) to get familiar with the problem we are trying to address.
+A good starting point will be to determine the number of STR positions across all STRs specified in [this BED file](./data/test.bed), overlap the gene region of the SAMD11 gene.
+The coordinates of the SAMD11 gene are specified in [this GTF file](./data/test.gtf).
+According to my tests, there are 68 nucleotides in the entire SAMD11 gene sequence that consist of STRs specified in the `test.bed` file.
+If you manage to get to the same value, you can try the next challenge, which will be to determine the amount of overlap between STRs in `test.bed` and the exonic regions of the SAMD11 gene.
+According to my tests, the answer here should be 24 nucleotides.
+I will leave it up to you to figure out how you want to tackle this, but it may be useful to merge all overlapping exons from the different SAMD11 transcripts using.
+This could be done using [gtftools](http://www.genemine.org/gtftools.php), for example, although you will need to figure out how to install it.
+
+The most important part: don't get too frustrated or discouraged if something doesn't work.
+It is expected that it will not work perfectly the first time.
+This will be an iterative process where we figure out the best way to do this.
+Don't hestitate to reach out if you have any questions or are stuck.
