@@ -82,6 +82,7 @@ To implement the CLI, you can use python's [argparse](https://docs.python.org/3/
 There are many tutorials online that show how to use it.
 The CLI should take at least two arguments: one that specifies the filepath to a GTF file with gene annotations, and one that specifies the filepath to a BED file that contains STR regions.
 The script should then calculate the STR density of each gene and return this to the user.
+
 **Goal 2:** create a folder in this GitHub repository called `scripts` that we can use to store our program in. 
 The script that you create in `Goal 1` should be stored here, for example.
 To learn more about Git, take a look at [this page](https://github.com/git-guides).
