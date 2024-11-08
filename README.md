@@ -75,3 +75,15 @@ The most important part: don't get too frustrated or discouraged if something do
 It is expected that it will not work perfectly the first time.
 This will be an iterative process where we figure out the best way to do this.
 Don't hestitate to reach out if you have any questions or are stuck.
+
+## 2024-11-08: taskset 2
+**Goal 1:** create a standalone python script that calculates STR densities in genes and has a command-line interface (CLI).
+To implement the CLI, you can use python's [argparse](https://docs.python.org/3/library/argparse.html) library.
+There are many tutorials online that show how to use it.
+The CLI should take at least two arguments: one that specifies the filepath to a GTF file with gene annotations, and one that specifies the filepath to a BED file that contains STR regions.
+The script should then calculate the STR density of each gene and return this to the user.
+**Goal 2:** create a folder in this GitHub repository called `scripts` that we can use to store our program in. 
+The script that you create in `Goal 1` should be stored here, for example.
+To learn more about Git, take a look at [this page](https://github.com/git-guides).
+For now, you should propably only use the [Add](https://github.com/git-guides/git-add), [Commit](https://github.com/git-guides/git-commit), and [Push](https://github.com/git-guides/git-push) commands.
+You can use these commands either from the command line or through VSCode (again, there are many tutorials online for this).
