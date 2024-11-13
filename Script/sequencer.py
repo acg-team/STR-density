@@ -52,19 +52,21 @@ def calculate_density(gtf_data, bed_data):
     for _, gene in genes.iterrows():
         gene_name = get_gene_name(gene['attribute'])
         gene_interval = (gene['start'], gene['end'])
-        chromosome = gene['seqname']
-        str_data = bed_data[bed_data['chrom'] == chromosome]
-        total_overlap = 0
+        
+        str_data = bed_data[bed_data['chrom'] == gene['seqname']]
+        # str_data = str_data[(str_data["end"] >= gene_interval[0]) & (str_data["start"] <= gene_interval[1])] # select only STRs that overlap the gene
+        str_data = str_data[(str_data["start"] > gene_interval[0]) & (str_data["end"] <= gene_interval[1])] # select only STRs that are located fully within gene
+        
+        total_overlap = (str_data["end"] - str_data["start"]).sum()
         gene_length = gene['end'] - gene['start'] + 1
-        for _, str_row in str_data.iterrows():
-            str_interval = (str_row['start'], str_row['end'])
-            overlap = max(0, min(gene_interval[1], str_interval[1]) - max(gene_interval[0], str_interval[0]))
-            total_overlap += overlap
         if gene_length > 0:
             density = total_overlap / gene_length
         else:
             density = 0
+
         results.append((gene_name, total_overlap, density))
+        print(f"Working on gene number {len(results)} (out of {len(genes)})", end='\r', file=sys.stderr)
+    print()
     return results
 
 def main():

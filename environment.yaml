@@ -1,0 +1,8 @@
+name: STR-density
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - numpy
+  - pandas

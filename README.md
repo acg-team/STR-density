@@ -88,3 +88,20 @@ The script that you create in `Goal 1` should be stored here, for example.
 To learn more about Git, take a look at [this page](https://github.com/git-guides).
 For now, you should propably only use the [Add](https://github.com/git-guides/git-add), [Commit](https://github.com/git-guides/git-commit), and [Push](https://github.com/git-guides/git-push) commands.
 You can use these commands either from the command line or through VSCode (again, there are many tutorials online for this).
+
+## 2024-11-13: taskset 3
+Good job on implementing the script!
+I made a few small changes to the `calculate_density()` function so it runs a bit faster.
+I also propose some changes to the format in which the results are returned by the script:
+
+1)  Currently, the output is just written to stdout using `print()`, please also add some functionality to write the results to an output file specified via a `--output` commmand line argument.
+2)  Please return the output in CSV format so it will be easier to work with in the future. 
+    You can make a pandas DataFrame that contains the results and then use `pd.DataFrame.to_csv()` to write it to a file.
+3)  Currently, the script only returns the `gene_name`. 
+    Please also return the `gene_id` as well.
+
+Once you've implemented these changes, you can run the script on the full dataset.
+You can find the BED file we'll use [here]().
+You can download a complete GTF file of the human genome directly from [GENCODE](https://www.gencodegenes.org/human/#) (download the 'Basic gene annotation' GTF file for the 'CHR' regions).
+Get the files, run the script, and store the output.
+Then we can get started on the analysis!
