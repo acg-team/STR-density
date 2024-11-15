@@ -101,7 +101,8 @@ I also propose some changes to the format in which the results are returned by t
     Please also return the `gene_id` as well.
 
 Once you've implemented these changes, you can run the script on the full dataset.
-You can find the BED file we'll use [here]().
+You can find the BED file we'll use [here](https://github.com/acg-team/ConSTRain/tree/main/resources/h_sapiens) (the file you need is called 'GRCh38_repeats.bed.gz').
+You can download it and then uncompress it at the command line using `gunzip GRCh38_repeats.bed.gz`.
 You can download a complete GTF file of the human genome directly from [GENCODE](https://www.gencodegenes.org/human/#) (download the 'Basic gene annotation' GTF file for the 'CHR' regions).
 Get the files, run the script, and store the output.
 Then we can get started on the analysis!
