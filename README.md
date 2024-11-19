@@ -106,3 +106,13 @@ You can download it and then uncompress it at the command line using `gunzip GRC
 You can download a complete GTF file of the human genome directly from [GENCODE](https://www.gencodegenes.org/human/#) (download the 'Basic gene annotation' GTF file for the 'CHR' regions).
 Get the files, run the script, and store the output.
 Then we can get started on the analysis!
+
+## 2024-11-19: taskset 4
+By now you should have the STR density of all human genes in the GENCODE GTF file.
+This is the point where we switch from pure coding to investigating biological questions.
+The main motivation for this project was to determine if there is a link between the evolutionary age of a gene and it's STR content.
+To find the evolutionary ages of the genes in our dataset, you can use [GenOrigen](http://chenzxlab.hzau.edu.cn/GenOrigin/#!/).
+Specifically, [this CSV file](http://chenzxlab.hzau.edu.cn/static/GenOrigin/download/Age_Inference/Homo_sapiens.csv) contains the gene ages for human protein coding genes.
+You can map the gene ages contained in this CSV to the genes you already analysed by matching on the `ensembl_gene_id`.
+
+*Hint: you might have to remove the ENSEMBL version numbers from the gene ids in your dataset first. For example, ENSG00000290825.1 -> ENSG00000290825*
